@@ -1,11 +1,11 @@
 package Railway.stepDefination;
 
 import Railway.Common.Utilities;
-import Railway.Constant.Constant;
 import Railway.pageobjects.BookTicketPage;
 import Railway.pageobjects.GeneralPage;
 import Railway.pageobjects.HomePage;
 import Railway.pageobjects.LoginPage;
+import Railway.railway_objetcs.AccountInfo;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.When;
 
@@ -15,6 +15,7 @@ public class BookTicketStep {
     BookTicketPage  bookTicketPage = new BookTicketPage();
     HomePage homePage = new HomePage();
     GeneralPage generalPage = new GeneralPage();
+    AccountInfo accountInfo;
 
     @Given("Navigate to Railway website ang login")
     public void gotoRailWay(){
@@ -23,9 +24,9 @@ public class BookTicketStep {
 
         homePage.open();
         System.out.println("Login with valid account");
-        loginPage.enterUserName(Constant.USERNAME);
-        loginPage.enterPassWord(Constant.PASSWORD);
-        loginPage.getBtnLogin().click();
+        loginPage.clickTabLogin();
+        accountInfo = new AccountInfo("demo@gmail.com","tranduytien");
+        loginPage.login(accountInfo);
 
         generalPage.gotoBookTicketPage();
     }

@@ -10,10 +10,6 @@ public class LoginPage {
 
     private final By tabLogin = By.xpath("//div[@id='menu']//a[@href='/Account/Login.cshtml']");
 
-    public WebElement getTablogin(){
-        return Constant.WEBDRIVER.findElement(tabLogin);
-    }
-
     public WebElement getTxtUsername() {
         return Constant.WEBDRIVER.findElement(By.id("username"));
     }

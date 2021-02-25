@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 
 public class ChangePasswordPage {
 
-
     // element method
     public WebElement getCurrentPassword(){
         return Constant.WEBDRIVER.findElement(By.id("//input[@id='currentPassword']"));

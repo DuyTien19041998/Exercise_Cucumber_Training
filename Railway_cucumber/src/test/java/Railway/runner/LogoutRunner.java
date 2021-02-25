@@ -4,12 +4,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/feature/bookticket.feature",
-        glue = {"stepDefination"}
+        features = "src/test/resources/feature/logout.feature", glue = {"stepDefination"}
 )
-public class BookTicketRunner {
+public class LogoutRunner {
 
 }

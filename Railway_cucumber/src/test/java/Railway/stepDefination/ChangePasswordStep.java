@@ -1,7 +1,6 @@
 package Railway.stepDefination;
 
 import Railway.Common.Utilities;
-import Railway.Constant.Constant;
 import Railway.pageobjects.ChangePasswordPage;
 import Railway.pageobjects.HomePage;
 import Railway.pageobjects.LoginPage;
@@ -10,6 +9,7 @@ import cucumber.annotation.en.Given;
 import cucumber.annotation.en.When;
 
 public class ChangePasswordStep {
+
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     ChangePasswordPage changePasswordPage = new ChangePasswordPage();
